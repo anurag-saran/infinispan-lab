@@ -26,6 +26,11 @@ The latest version of Red Hat JBoss Data Grid is included in the server/ folder.
 ## 5. Clustering ##
 * Project: clustering
 * Cache clustering can be done in both library mode and client-server mode. There are three types of clustering modes: replication, distribution, and invalidation. In replication mode the set of entries in any given cache in the cluster is identical to the set of entries in any other cache in the cluster. In distribution mode each cache in the cluster will contain a subset of the set of all entries. There are many factors that go into deciding which entries are present on which caches in the cluster, and they are configurable so you can ensure losless storage even in the event of a data warehouse outage. Invalidation mode serves as a read only cache, when a cache entry is changed on any cache it is immediatly removed from each other cache. This will force the other caches to go back to the cache store to retrieve the new data.
+```
+ // cd infinispan-lab/code/clustering
+ mvn package
+ pwd./run.sh 
+```
 
 ## 6. Listeners and Interceptors ##
 * Project: listeners-interceptors
