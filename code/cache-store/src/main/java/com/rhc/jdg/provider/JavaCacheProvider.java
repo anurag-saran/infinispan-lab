@@ -8,7 +8,9 @@ import org.infinispan.manager.DefaultCacheManager;
 
 public class JavaCacheProvider {
 	private CacheContainer cacheContainer;
-
+// Java code - embeded method gives you access to cache.evict("key1"); to evict the record. 
+// or we can set maxEntry and then the system can then move it to file system.
+//the way to get rid of it is to remove/delete it.
 	protected CacheContainer getCacheContainer() {
 		if (cacheContainer == null) {
 			Configuration config = new ConfigurationBuilder()
